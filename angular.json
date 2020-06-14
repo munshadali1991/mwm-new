@@ -5,10 +5,27 @@
   "projects": {
     "mwm-cli": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss",
+          "skipTests": true
+        },
+          "@schematics/angular:class": {
+          "skipTests": true
+        },
+          "@schematics/angular:directive": {
+          "skipTests": true
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true
+        }
+      },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "mwm",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -135,10 +152,5 @@
   "defaultProject": "mwm-cli",
   "cli": {
     "analytics": "f391a319-df87-46e9-a138-757553c4b5aa"
-  },
-  "schematics": {
-    "@schematics/angular:component": {
-      "styleext": "scss"
-    }
   }
 }
